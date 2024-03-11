@@ -29,7 +29,7 @@ class MenuPageState extends State<MenuPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Local user and firebase user are in sync: ${widget.state.getCurrentUser().toString() == widget.state.getCurrentFirebaseUser().toString()}'),
-            Text(widget.state.getCurrentFirebaseUser().toString()),
+            Text(widget.state.getCurrentUser().toString()),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -40,9 +40,8 @@ class MenuPageState extends State<MenuPage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: ElevatedButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

@@ -38,9 +38,8 @@ class FriendsPageState extends State<FriendsPage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: ElevatedButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );

@@ -25,10 +25,12 @@ final _rootNavKey = GlobalKey<NavigatorState>();
 final _sectionNavKey = GlobalKey<NavigatorState>();
 
 String _checkInitialLocation() {
-  if (state.getCurrentFirebaseUser().toString() == state.getCurrentUser().toString() &&
+  if (state.getCurrentFirebaseUser().toString() ==
+          state.getCurrentUser().toString() &&
       state.getCurrentFirebaseUser() != null) {
     return '/menu';
-  } else if (state.getCurrentFirebaseUser().toString() == state.getCurrentUser().toString() &&
+  } else if (state.getCurrentFirebaseUser().toString() ==
+          state.getCurrentUser().toString() &&
       state.getCurrentFirebaseUser() == null) {
     return '/login';
   } else {
@@ -126,7 +128,6 @@ class MyAppState extends State<MyApp> {
     );
   }
 }
-
 class ScaffoldWithNavbar extends StatelessWidget {
   const ScaffoldWithNavbar(this.navigationShell, {super.key});
   final StatefulNavigationShell navigationShell;
@@ -134,17 +135,15 @@ class ScaffoldWithNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: FloatingActionButton(
-          heroTag: 'btn1',
+      appBar: AppBar(actions: <Widget>[
+        ElevatedButton(
           onPressed: () {
             state.logOut();
             context.go('/login');
           }, //logout button
-          tooltip: 'Log Out',
           child: const Text('Logout'),
         ),
-      ),
+      ]),
       body: navigationShell,
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.lightBlueAccent,

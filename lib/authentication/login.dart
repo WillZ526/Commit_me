@@ -9,12 +9,16 @@ import 'package:commit_me/firebase/AppState.dart';
 class LoginPage extends StatefulWidget {
   final AppState state;
   const LoginPage({super.key, required this.state});
-
   @override
   State<LoginPage> createState() => LoginPageState();
 }
 
 class LoginPageState extends State<LoginPage> {
+  @override
+  void initState() {
+    super.initState();
+    setState(() {});
+  }
 
   String? email;
   String? password;
@@ -38,11 +42,15 @@ class LoginPageState extends State<LoginPage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
+            'Commit Me',
+            style: headtitle,
+          ),
+          Text(
             'Login',
             style: headtitle,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 5, bottom: 50),
+            padding: const EdgeInsets.only(bottom: 20),
             child: Text(
               'Log In to continue',
               style: smalltext,
@@ -72,7 +80,8 @@ class LoginPageState extends State<LoginPage> {
                         fillColor: Colors.white,
                         focusColor: Colors.white,
                       ),
-                    )),
+                    )
+                  ),
                 Padding(
                   padding: const EdgeInsets.all(8),
                   child: TextFormField(

@@ -42,10 +42,8 @@ class ProfilePageState extends State<ProfilePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        heroTag: 'btn2',
+      floatingActionButton: ElevatedButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );
