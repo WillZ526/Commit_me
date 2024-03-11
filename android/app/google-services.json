@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "494691636457",
+    "project_id": "commit-me-ce3e7",
+    "storage_bucket": "commit-me-ce3e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494691636457:android:c692862aa745140a154c78",
+        "android_client_info": {
+          "package_name": "com.example.commit_me"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc3P8bXgekl2U3REqjnAkqk5lIhvFDKqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
